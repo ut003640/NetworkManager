@@ -271,8 +271,7 @@ no-auto-default=*
             Set the management mode of the hostname. This parameter will
             affect only the transient hostname. If a valid static hostname is set,
             NetworkManager will skip the update of the hostname despite the value of
-            this option. An hostname empty or equal to 'localhost', 'localhost6',
-            'localhost.localdomain' or 'localhost6.localdomain' is considered invalid.
+            this option. A hostname empty or equal to '(none)' is considered invalid.
           </para>
           <para><literal>default</literal>: NetworkManager will update the
           hostname with the one provided via DHCP or reverse DNS lookup of the
@@ -1375,7 +1374,7 @@ managed=1
               scanning. This defaults to <literal>yes</literal> in which case
               a random, locally-administered MAC address will be used.
               The setting <literal>wifi.scan-generate-mac-address-mask</literal>
-              allows to influence the generated MAC address to use certain vendor
+              can be used to influence the generated MAC address to use certain vendor
               OUIs.
               If disabled, the MAC address during scanning is left unchanged to
               whatever is configured.
@@ -1399,7 +1398,7 @@ managed=1
           <listitem>
             <para>
               Like the per-connection settings <literal>ethernet.generate-mac-address-mask</literal>
-              and <literal>wifi.generate-mac-address-mask</literal>, this allows to configure the
+              and <literal>wifi.generate-mac-address-mask</literal>, this can be used to configure the
               generated MAC addresses during scanning. See <citerefentry><refentrytitle>nm-settings-nmcli</refentrytitle><manvolnum>5</manvolnum></citerefentry>
               for details.
             </para>
@@ -1581,7 +1580,7 @@ managed=1
   <refsect1>
     <title><literal>global-dns-domain</literal> sections</title>
     <para>Sections with a name starting with the "global-dns-domain-"
-    prefix allow to define global DNS configuration for specific
+    prefix allow one to define global DNS configuration for specific
     domains.  The part of section name after "global-dns-domain-"
     specifies the domain name a section applies to (for example, a
     section could be named "global-dns-domain-foobar.com").  More
